@@ -6,10 +6,12 @@
 void cadastrar_contato(struct contato *p) {
     bool stop = false;
     do {
-        if (*p->nome == '\000') {
+        // se nome for nulo ou primeiro caracter tiver \n
+        if (*p->nome == '\000' || p->nome[0] == '\n') {
             char input[50];
 
-            printf("digite o nome do novo contato: ");
+            // prompt ao usuario
+            printf("\ndigite o nome do novo contato: ");
             if (fgets(input, 50, stdin) != NULL) input[strcspn(input, "\n")] = 0;
             strcpy(p->nome, input);
 
@@ -17,7 +19,7 @@ void cadastrar_contato(struct contato *p) {
             scanf("%d", &p->numero);
             getchar();
 
-            printf("numero cadastrado\n\n");
+            printf("\nnumero cadastrado\n\n");
             stop = true;
         } else p++;
     } while(stop != true);

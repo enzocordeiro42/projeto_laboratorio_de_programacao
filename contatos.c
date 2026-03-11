@@ -16,7 +16,7 @@ int main() {
         printf("6) Estatisticas (recursivo)\n");
         printf("7) Sair\n");
         printf("Escolha uma opção: ");
-        fgets(escolha, 3, stdin); //resultado: escolha = i\0\n
+        fgets(escolha, 3, stdin); //resultado: escolha = i\n\00
 
         switch(escolha[0]) {
             case '1':
@@ -24,6 +24,7 @@ int main() {
                 break;
             case '2':
                 {
+                    // tam é usado para descobrir tamanho real do vetor
                     int tam = 0, i = 0;
                     while (lista[i].nome[0] != '\000') {
                         tam++;
@@ -34,6 +35,25 @@ int main() {
                 }
             case '3':
                 buscar_contato(&lista);
+                break;
+            case '4':
+                editar_contato(&lista);
+                break;
+            case '5':
+                apagar_contatos(&lista);
+                break;
+            case '7':
+                int sair_escolha;
+                printf("\ntodos os contatos serão perdidos, tem certeza que quer sair (1 - sim 2 - nao)? ");
+                scanf("%d", sair_escolha);
+
+                if (sair_escolha == 1) printf("saindo do programa\n");
+                else {
+                    printf("\n");
+                    escolha[0] = '0';
+                }
+            default:
+                printf("\nesta opção é invalida ou não foi implementada.\n\n");
         }
     } while (escolha[0] != '7');
 }
