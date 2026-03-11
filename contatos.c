@@ -32,6 +32,8 @@ int main() {
                     listar_contatos(&lista, tam);
                     break;
                 }
+            case '3':
+                buscar_contato(&lista);
         }
     } while (escolha[0] != '7');
 }

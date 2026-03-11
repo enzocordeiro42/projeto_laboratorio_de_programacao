@@ -6,7 +6,7 @@ void listar_contatos(struct contato *p, int n) {
         int i = 0;
         while (p->nome[0] != '\000') {
             printf("contato %d:\n", i+1);
-            printf("nome: %s", p->nome);
+            printf("nome: %s\n", p->nome);
             printf("numero: %d\n\n", p->numero);
             p++;
             i++;
