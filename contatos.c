@@ -27,7 +27,7 @@ int main() {
                     // tam é usado para descobrir tamanho real do vetor
                     int tam = 0, i = 0;
                     while (lista[i].nome[0] != '\000') {
-                        tam++;
+                        if (lista[i].nome[0] != '\n') tam++;
                         i++;
                     }
                     listar_contatos(&lista, tam);
@@ -43,14 +43,16 @@ int main() {
                 apagar_contatos(&lista);
                 break;
             case '7':
-                int sair_escolha;
-                printf("\ntodos os contatos serão perdidos, tem certeza que quer sair (1 - sim 2 - nao)? ");
-                scanf("%d", sair_escolha);
+                {
+                    int sair_escolha;
+                    printf("\ntodos os contatos serão perdidos, tem certeza que quer sair (1 - sim 2 - nao)? ");
+                    scanf("%d", sair_escolha);
 
-                if (sair_escolha == 1) printf("saindo do programa\n");
-                else {
-                    printf("\n");
-                    escolha[0] = '0';
+                    if (sair_escolha == 1) printf("saindo do programa\n");
+                    else {
+                        printf("\n");
+                        escolha[0] = '0';
+                    }
                 }
             default:
                 printf("\nesta opção é invalida ou não foi implementada.\n\n");
