@@ -48,11 +48,12 @@ int main() {
                     printf("\ntodos os contatos serão perdidos, tem certeza que quer sair (1 - sim 2 - nao)? ");
                     scanf("%d", sair_escolha);
 
-                    if (sair_escolha == 1) printf("saindo do programa\n");
+                    if (sair_escolha != 1) printf("saindo do programa\n");
                     else {
                         printf("\n");
                         escolha[0] = '0';
                     }
+                    break;
                 }
             default:
                 printf("\nesta opção é invalida ou não foi implementada.\n\n");
