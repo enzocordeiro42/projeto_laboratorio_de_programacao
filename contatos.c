@@ -15,7 +15,7 @@ int main() {
         printf("5) Excluir\n");
         printf("6) Estatisticas (recursivo)\n");
         printf("7) Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         fgets(escolha, 3, stdin); //resultado: escolha = i\n\00
 
         switch(escolha[0]) {
@@ -42,6 +42,10 @@ int main() {
             case '5':
                 apagar_contatos(&lista);
                 break;
+            case'6':
+                estatistica(&lista);
+                break;
+
             case '7':
                 {
                     int sair_escolha;

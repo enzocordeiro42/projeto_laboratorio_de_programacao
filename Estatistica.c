@@ -4,171 +4,101 @@
 
 void estatistica(struct contato *p)
 {
+   int letras[26] = {0};
 
-int i = 0;
-int a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
+    if (p ->nome[0] == '\000'){
 
- do {
+         for(int i = 0; i < 26; i++){
+                    if(letras[i] > 0){
+                        printf("%c = %d\n", 'a' - i, letras[i]);
+                    }
+                }
+
+        return;
+    }
+    
+char letra = p->nome[0];
+
         if (p->nome[0] == 'a' || p->nome[0] == 'A') {
-           a++;
+           letras[0]++;
         }
         else if (p->nome[0] == 'b' || p->nome[0] == 'B') {
-           b++;
+           letras[1]++;
         }
         else if (p->nome[0] == 'c' || p->nome[0] == 'C') {
-           c++;
+           letras[2]++;
         }
         else if (p->nome[0] == 'd' || p->nome[0] == 'D') {
-           d++;
+           letras[3]++;
         }
         else if (p->nome[0] == 'e' || p->nome[0] == 'E') {
-           e++;
+           letras[4]++;
         }
         else if (p->nome[0] == 'f' || p->nome[0] == 'F') {
-           f++;
+           letras[5]++;
         }
         else if (p->nome[0] == 'g' || p->nome[0] == 'G') {
-           g++;
+           letras[6]++;
         }
         else if (p->nome[0] == 'h' || p->nome[0] == 'H') {
-           h++;
+           letras[7]++;
         }
         else if (p->nome[0] == 'i' || p->nome[0] == 'I') {
-           i++;
+           letras[8]++;
         }
         else if (p->nome[0] == 'j' || p->nome[0] == 'J') {
-           j++;
+           letras[9]++;
         }
         else if (p->nome[0] == 'k' || p->nome[0] == 'K') {
-           k++;
+           letras[10]++;
         }
         else if (p->nome[0] == 'l' || p->nome[0] == 'L') {
-           l++;
+           letras[11]++;
         }
         else if (p->nome[0] == 'm' || p->nome[0] == 'M') {
-           m++;
+           letras[12]++;
         }
         else if (p->nome[0] == 'n' || p->nome[0] == 'N') {
-           n++;
+           letras[13]++;
         }
         else if (p->nome[0] == 'o' || p->nome[0] == 'O') {
-           o++;
+           letras[14]++;
         }
         else if (p->nome[0] == 'p' || p->nome[0] == 'P') {
-           p++;
+           letras[15]++;
         }
         else if (p->nome[0] == 'q' || p->nome[0] == 'Q') {
-           q++;
+           letras[16]++;
         }
         else if (p->nome[0] == 'r' || p->nome[0] == 'R') {
-           r++;
+           letras[17]++;
         }
         else if (p->nome[0] == 's' || p->nome[0] == 'S') {
-           s++;
+           letras[18]++;
         }
         else if (p->nome[0] == 't' || p->nome[0] == 'T') {
-           t++;
+           letras[19]++;
         }
         else if (p->nome[0] == 'u' || p->nome[0] == 'U') {
-           u++;
+           letras[20]++;
         }
         else if (p->nome[0] == 'v' || p->nome[0] == 'V') {
-           v++;
+           letras[21]++;
         }
         else if (p->nome[0] == 'w' || p->nome[0] == 'W') {
-           w++;
+           letras[22]++;
         }
         else if (p->nome[0] == 'x' || p->nome[0] == 'X') {
-           j++;
+           letras[23]++;
         }
         else if (p->nome[0] == 'y' || p->nome[0] == 'Y') {
-           y++;
+           letras[24]++;
         }
         else if (p->nome[0] == 'z' || p->nome[0] == 'Z') {
-           z++;
+           letras[25]++;
         }
-        p++;
-        i++;
-    } while (p->nome[0] != '\000');
 
 
-    if (a != 0){
-        printf("a = %d", a);
-    }
-    else if (b != 0){
-        printf("b = %d", b);
-    }
-    else if (c != 0){
-        printf("c = %d", c);
-    }
-    else if (d != 0){
-        printf("d = %d", d);
-    }
-    else if (e != 0){
-        printf("b = %d", e);
-    }
-    else if (f != 0){
-        printf("f = %d", f);
-    }
-    else if (g != 0){
-        printf("g = %d", g);
-    }
-    else if (h != 0){
-        printf("h = %d", h);
-    }
-    else if (i != 0){
-        printf("i = %d", i);
-    }
-    else if (j != 0){
-        printf("j = %d", j);
-    }
-    else if (k != 0){
-        printf("k = %d", k);
-    }
-    else if (l != 0){
-        printf("l = %d", l);
-    }
-    else if (m != 0){
-        printf("m = %d", m);
-    }
-    else if (n != 0){
-        printf("n = %d", n);
-    }
-    else if (o != 0){
-        printf("o = %d", o);
-    }
-    else if (p != 0){
-        printf("p = %d", p);
-    }
-    else if (q != 0){
-        printf("q = %d", q);
-    }
-    else if (r != 0){
-        printf("r = %d", r);
-    }
-    else if (s != 0){
-        printf("s = %d", s);
-    }
-    else if (t != 0){
-        printf("t = %d", t);
-    }
-    else if (u != 0){
-        printf("u = %d", u);
-    }
-    else if (v != 0){
-        printf("v = %d", v);
-    }
-    else if (w != 0){
-        printf("w = %d", w);
-    }
-    else if (x != 0){
-        printf("x = %d", x);
-    }
-    else if (y != 0){
-        printf("y = %d", y);
-    }
-    else if (z != 0){
-        printf("z = %d", z);
-    }
+ estatistica(p + 1);
 
-};
+}
