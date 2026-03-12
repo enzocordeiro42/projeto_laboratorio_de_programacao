@@ -46,9 +46,10 @@ int main() {
                 {
                     int sair_escolha;
                     printf("\ntodos os contatos serão perdidos, tem certeza que quer sair (1 - sim 2 - nao)? ");
-                    scanf("%d", sair_escolha);
+                    scanf("%d", &sair_escolha);
+                    getchar();
 
-                    if (sair_escolha != 1) printf("saindo do programa\n");
+                    if (sair_escolha == 1) printf("saindo do programa\n");
                     else {
                         printf("\n");
                         escolha[0] = '0';
