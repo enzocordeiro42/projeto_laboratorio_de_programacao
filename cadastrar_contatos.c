@@ -15,6 +15,10 @@ void cadastrar_contato(struct contato *p) {
             if (fgets(input, 50, stdin) != NULL) input[strcspn(input, "\n")] = 0;
             strcpy(p->nome, input);
 
+            printf("\ndigite o email do novo contato: ");
+            if (fgets(input, 50, stdin) != NULL) input[strcspn(input, "\n")] = 0;
+            strcpy(p->email, input);
+
             printf("digite o numero do novo contato: ");
             scanf("%d", &p->numero);
             getchar();

@@ -26,6 +26,10 @@ void editar_contato(struct contato *p) {
                     if (fgets(input, 50, stdin) != NULL) input[strcspn(input, "\n")] = 0;
                     strcpy(p->nome, input);
 
+                    printf("digite o novo email do contato: ");
+                    if (fgets(input, 50, stdin) != NULL) input[strcspn(input, "\n")] = 0;
+                    strcpy(p->email, input);
+
                     printf("digite o novo numero do contato: ");
                     scanf("%d", &p->numero);
                     getchar();
@@ -55,6 +59,10 @@ void editar_contato(struct contato *p) {
                     printf("digite o novo nome do contato: ");
                     if (fgets(nome_input, 50, stdin) != NULL) nome_input[strcspn(nome_input, "\n")] = 0;
                     strcpy(p->nome, nome_input);
+
+                    printf("digite o novo email do contato: ");
+                    if (fgets(nome_input, 50, stdin) != NULL) nome_input[strcspn(nome_input, "\n")] = 0;
+                    strcpy(p->email, nome_input);
 
                     printf("digite o novo numero do contato: ");
                     scanf("%d", &p->numero);

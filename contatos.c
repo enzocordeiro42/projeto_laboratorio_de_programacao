@@ -8,6 +8,7 @@ int main() {
     char escolha[3];
     struct contato lista[100] = {0};
     int letras[26] = {0};
+    
     do {
         printf("1) Cadastrar\n");
         printf("2) Listar\n");

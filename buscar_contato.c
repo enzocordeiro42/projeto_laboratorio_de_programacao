@@ -12,7 +12,9 @@ void buscar_contato(struct contato *p) {
     do {
         // compara se nomes forem iguais
         if (strcmp(input, p->nome) == 0) {
-            printf("numero encontrado: %d\n\n", p->numero);
+            printf("contato encontrado: \n");
+            printf("email: %d\n", p->email);
+            printf("numero: %d\n\n", p->numero);
             return;
         }
         p++;

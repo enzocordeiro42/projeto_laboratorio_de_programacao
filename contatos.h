@@ -1,5 +1,5 @@
 struct contato {
-    char nome[50]; int numero;
+    char nome[50]; int numero; char email[50];
 };
 void cadastrar_contato(struct contato *p);
 void listar_contatos(struct contato *p, int n);

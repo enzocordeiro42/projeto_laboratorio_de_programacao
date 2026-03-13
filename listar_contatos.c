@@ -11,6 +11,7 @@ void listar_contatos(struct contato *p, int n) {
             if (p->nome[0] != '\n') {
                 printf("contato %d:\n", i+1);
                 printf("nome: %s\n", p->nome);
+                printf("email: %s\n", p->email);
                 printf("numero: %d\n\n", p->numero);
             }
             p++;
