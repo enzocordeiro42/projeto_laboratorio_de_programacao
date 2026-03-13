@@ -2,15 +2,16 @@
 #include <string.h>
 #include "contatos.h"
 
-void estatistica(struct contato *p)
+void estatistica(struct contato *p, int letras[26])
 {
-   int letras[26] = {0};
 
     if (p ->nome[0] == '\000'){
 
+      printf("Lista alfabetica \n\n");
+
          for(int i = 0; i < 26; i++){
                     if(letras[i] > 0){
-                        printf("%c = %d\n", 'a' - i, letras[i]);
+                        printf("%c = %d\n", 'a' + i, letras[i]);
                     }
                 }
 
@@ -99,6 +100,6 @@ char letra = p->nome[0];
         }
 
 
- estatistica(p + 1);
+ estatistica(p + 1, letras);
 
 }

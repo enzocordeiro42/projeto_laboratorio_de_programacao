@@ -7,6 +7,7 @@
 int main() {
     char escolha[3];
     struct contato lista[100] = {0};
+    int letras[26] = {0};
     do {
         printf("1) Cadastrar\n");
         printf("2) Listar\n");
@@ -43,9 +44,12 @@ int main() {
                 apagar_contatos(&lista);
                 break;
             case'6':
-                estatistica(&lista);
+            
+               for(int i = 0; i < 26; i++) {
+                    letras[i] = 0;
+                }
+                estatistica(lista, letras);
                 break;
-
             case '7':
                 {
                     int sair_escolha;
